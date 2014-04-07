@@ -1,7 +1,10 @@
 package com.test.parser;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -40,7 +43,8 @@ public class ParserTask implements Callable<String> {
 				bs.add(b);
 			}
 		}
-		createExcel("E:\\lashou\\" + type + "-" + "20130407" + ".xls", bs);
+		DateFormat df = new SimpleDateFormat("yyyyMMdd");
+		createExcel("E:\\lashou\\" + type + "-" + df.format(new Date()) + ".xls", bs);
 		return null;
 	}
 

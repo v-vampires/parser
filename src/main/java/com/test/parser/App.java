@@ -37,7 +37,7 @@ public class App
         	ParserTask task = new ParserTask(e.getKey(), e.getValue());
         	pool.submit(task);
         }
-        pool.shutdown();
+        //pool.shutdown();
     }
     
     public static Map<String,String> getTypeUrls(){
